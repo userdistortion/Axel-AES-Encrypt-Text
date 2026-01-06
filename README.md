@@ -1,6 +1,8 @@
-Axel AES Encrypt Text.bat
 
-<pre> ```@echo off
+
+<pre>
+Axel AES Encrypt Text.bat
+@echo off
 powershell -ExecutionPolicy Bypass -File "%~dp0cifrador.ps1"
 
 cifrador.ps1
@@ -101,4 +103,4 @@ do {
         "2" { Descifrar }
     }
 } while ($true)
-``` </pre>
+</pre>
