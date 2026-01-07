@@ -1,4 +1,6 @@
-    Historia
+# Axel AES Encrypt Text (Cifrador de textos de Axel N. Inca)
+
+## Historia
 
 Desde muy joven sentí curiosidad por el cifrado de textos. Alrededor del año 2012, cuando tenía entre 11 y 12 años, desarrollé por mi cuenta una forma simple de cifrar el abecedario utilizando otros símbolos. Lo hacía para escribir en mis carpetas de la primaria y evitar que mis compañeros, que solían burlarse de mí, pudieran leer lo que escribía. Sin saberlo del todo, ahí nació una idea que nunca me abandonó.
 
@@ -16,7 +18,8 @@ Este sistema de cifrado comenzó a tomar forma la noche del viernes 2 de enero d
 
 Agradezco profundamente a todas las personas que alguna vez me acompañaron e impulsaron estas ideas en mí. Lamento no haber podido cumplir sus expectativas cuando todavía creían en mí. Hoy, cuando esas personas ya no están, siento que por fin tengo la fuerza y el conocimiento necesarios, aunque también me siento solo. Como una forma de saldar esa deuda, decido hacer públicos mis programas. Espero que sean útiles para quienes los utilicen y que, si tienen la amabilidad de hacerlo, recuerden que este programa tiene una historia. Y esta es la mía.
 
-    Funcionamiento y explicación detallada
+## Funcionamiento y explicación detallada
+
 El archivo comienza configurando la apariencia de la consola. Se establece el fondo negro, el texto blanco y se asigna un título a la ventana. Esto no afecta al funcionamiento del cifrado, pero fija un entorno visual consistente antes de que ocurra cualquier interacción. Inmediatamente después se limpia la pantalla para que el usuario nunca vea mensajes previos del sistema o residuos de ejecuciones anteriores.
 
 Luego se define la función DerivarClave. Esta función recibe la contraseña que el usuario escribe y no la usa directamente como clave de cifrado. En su lugar, convierte ese texto en bytes UTF-8 y lo procesa con SHA-256. El resultado es un bloque de 32 bytes que se utiliza como clave criptográfica real. Esto asegura que, independientemente de la longitud o del contenido de la contraseña, la clave final tenga siempre el tamaño correcto para AES-256.
@@ -43,13 +46,17 @@ El bucle final mantiene el programa activo indefinidamente. Cada vez que vuelve 
 
 En conjunto, el archivo funciona como una herramienta cerrada y autosuficiente. No escribe archivos, no guarda información en disco y no depende de estados anteriores. Cada ejecución es independiente, y toda la seguridad descansa en la contraseña y en el uso correcto del cifrado AES con clave derivada y vector de inicialización aleatorio.
 
-    Código original de Axel AES Encrypt Text.bat (lanzador) y cifrador.ps1 (código)
-Axel AES Encrypt Text.bat
+## Código original de Axel AES Encrypt Text.bat (lanzador) y cifrador.ps1 (código)
+
+### Axel AES Encrypt Text.bat 
+
 <pre>
 @echo off
 powershell -ExecutionPolicy Bypass -File "%~dp0cifrador.ps1"
 </pre>
-cifrador.ps1
+
+### cifrador.ps1
+
 <pre>
 # ========================================================
 # Axel AES Encrypt Text — AES Text Encryption Tool
